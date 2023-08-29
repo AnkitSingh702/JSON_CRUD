@@ -96,8 +96,7 @@ def crud():
                         crud()  
         delete()
         crud()
-    while True:
-        if option == 5:
-            print('you have chosen exit..')
-            break 
+    elif option == 5:
+        print("you have chosen exit..")
+        return
 crud()
