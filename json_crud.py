@@ -2,7 +2,7 @@ import json
 
 UserDict = {}
 def crud():
-    print(' 1 create \n 2 read \n 3 update \n 4 delete ')
+    print(' 1 create \n 2 read \n 3 update \n 4 delete \n 5 Exit')
     option= int(input('choose an option:- '))
     if option==1:
         def Create():
@@ -59,7 +59,7 @@ def crud():
                     elif opt == 3:
                         old_mob = input("enter old mobile number:= ")
                         if len(old_mob)==10:
-                            print(data)
+                            # print(data)
                             if old_mob in data:
                                 new_mob= input('enter new mobile:= ')
                                 if len(new_mob)==10:
@@ -95,5 +95,9 @@ def crud():
                         print("Your data is safe ..!!")
                         crud()  
         delete()
-        crud()   
+        crud()
+    while True:
+        if option == 5:
+            print('you have chosen exit..')
+            break 
 crud()
